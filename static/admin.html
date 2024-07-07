@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Live Vote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Create a New Survey</h1>
+    
+    <form id="surveyForm">
+        <div id="questions">
+            <div class="question">
+                <label>Question:</label>
+                <input type="text" name="question" required>
+                <div class="choices">
+                    <div class="choice">
+                        <label>Choice:</label>
+                        <input type="text" name="choice" required>
+                        <button type="button" class="delete-choice">Delete Choice</button>
+                    </div>
+                </div>
+                <button type="button" class="add-choice">Add Choice</button>
+            </div>
+        </div>
+        <button type="button" id="add-question">Add Question</button>
+        <button type="submit">Submit Survey</button>
+        <button id="toggleDarkMode">Toggle Dark Mode</button>
+        <script>
+            const toggleButton = document.getElementById('toggleDarkMode');
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            });
+        </script>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

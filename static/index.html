@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Vote</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Live Vote</h1>
-    <div id="surveyContainer"></div>
+    <div class="container">
+        <h1 class="text-center my-4">Live Vote</h1>
+        <div id="surveyContainer" class="mb-4"></div>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="client.js"></script>
 </body>

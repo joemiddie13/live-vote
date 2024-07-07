@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function addChoice(questionElement) {
       const choicesContainer = questionElement.querySelector('.choices');
       const newChoice = document.createElement('div');
-      newChoice.classList.add('choice');
+      newChoice.classList.add('choice', 'mb-2');
       newChoice.innerHTML = `
-          <label>Choice:</label>
-          <input type="text" name="choice" required>
-          <button type="button" class="delete-choice">Delete Choice</button>
+          <div class="form-group d-flex align-items-center">
+              <input type="text" name="choice" class="form-control" required>
+              <button type="button" class="btn btn-danger ml-2 delete-choice">Delete Choice</button>
+          </div>
       `;
       choicesContainer.appendChild(newChoice);
 
@@ -24,18 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add new question to the survey
   addQuestionButton.addEventListener('click', () => {
       const newQuestion = document.createElement('div');
-      newQuestion.classList.add('question');
+      newQuestion.classList.add('question', 'mb-3');
       newQuestion.innerHTML = `
-          <label>Question:</label>
-          <input type="text" name="question" required>
+          <div class="form-group">
+              <label>Question:</label>
+              <input type="text" name="question" class="form-control" required>
+          </div>
+          <button type="button" class="btn btn-success mb-2 add-choice">Add Choice</button>
           <div class="choices">
-              <div class="choice">
-                  <label>Choice:</label>
-                  <input type="text" name="choice" required>
-                  <button type="button" class="delete-choice">Delete Choice</button>
+              <div class="choice mb-2">
+                  <div class="form-group d-flex align-items-center">
+                      <input type="text" name="choice" class="form-control" required>
+                      <button type="button" class="btn btn-danger ml-2 delete-choice">Delete Choice</button>
+                  </div>
               </div>
           </div>
-          <button type="button" class="add-choice">Add Choice</button>
       `;
       questionsContainer.appendChild(newQuestion);
 

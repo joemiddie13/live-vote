@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Live Vote</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Live Vote / Admin</h1>
-    
-    <form id="surveyForm">
-        <div id="questions">
-            <div class="question">
-                <label>Question:</label>
-                <input type="text" name="question" required>
-                <button type="button" class="add-choice">Add Choice</button>
-                <div class="choices">
-                    <div class="choice">
-                        <label>Choice:</label>
-                        <input type="text" name="choice" required>
-                        <button type="button" class="delete-choice">Delete Choice</button>
+    <div class="container">
+        <h1 class="text-center my-4">Live Vote / Admin</h1>
+        <form id="surveyForm" class="mb-4">
+            <div id="questions">
+                <div class="question mb-3">
+                    <div class="form-group">
+                        <label>Question:</label>
+                        <input type="text" name="question" class="form-control" required>
+                    </div>
+                    <button type="button" class="btn btn-success mb-2 add-choice">Add Choice</button>
+                    <div class="choices">
+                        <div class="choice mb-2">
+                            <div class="form-group d-flex align-items-center">
+                                <input type="text" name="choice" class="form-control" required>
+                                <button type="button" class="btn btn-danger ml-2 delete-choice">Delete Choice</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <button type="button" id="add-question">Add Question</button>
-        <button type="submit">Submit Survey</button>
-        <button type="button" id="toggleDarkMode">Toggle Dark Mode</button>
-    </form>
+            <div class="d-flex align-items-center mb-2">
+                <button type="button" class="btn btn-info mr-2" id="add-question">Add Question</button>
+                <button type="submit" class="btn btn-primary mr-2">Submit Survey</button>
+                <button type="button" class="btn btn-secondary" id="toggleDarkMode">Toggle Dark Mode</button>
+            </div>
+        </form>
+    </div>
     
     <script>
         const toggleButton = document.getElementById('toggleDarkMode');

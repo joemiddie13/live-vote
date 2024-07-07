@@ -1,19 +1,39 @@
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 form {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
 }
 
 .question, .choice {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
+}
+
+.question label, .choice label {
+  margin-right: 10px;
+  min-width: 75px;
+}
+
+.question input[type="text"], .choice input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  margin-right: 10px;
 }
 
 button {
@@ -21,10 +41,47 @@ button {
   margin: 10px auto;
   padding: 10px 20px;
   cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-button.add-choice {
-  margin-left: 0;
+button:hover {
+  background-color: #0056b3;
+}
+
+button.add-choice, button.delete-choice {
+  background-color: #28a745;
+}
+
+button.add-choice:hover, button.delete-choice:hover {
+  background-color: #218838;
+}
+
+button.delete-choice {
+  background-color: #dc3545;
+}
+
+button.delete-choice:hover {
+  background-color: #c82333;
+}
+
+#add-question {
+  background-color: #17a2b8;
+}
+
+#add-question:hover {
+  background-color: #138496;
+}
+
+#toggleDarkMode {
+  background-color: #343a40;
+}
+
+#toggleDarkMode:hover {
+  background-color: #23272b;
 }
 
 /* Dark mode styles */
@@ -33,7 +90,15 @@ body.dark-mode {
   color: #e0e0e0;
 }
 
-button.dark-mode {
-  background-color: #333;
-  color: #fff;
+body.dark-mode form {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+body.dark-mode button {
+  background-color: #495057;
+}
+
+body.dark-mode button:hover {
+  background-color: #343a40;
 }

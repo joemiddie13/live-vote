@@ -12,8 +12,12 @@ let surveys = [];
 io.on('connection', (socket) => {
     console.log('A user connected');
 
+    // Send existing surveys to the newly connected client
+    socket.emit('surveyData', surveys);
+
     socket.on('createSurvey', (surveyData) => {
-        surveys.push(surveyData);
+        surveys = surveyData;
+        io.emit('surveyData', surveys);
         console.log('Survey created:', surveyData);
     });
 

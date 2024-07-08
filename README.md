@@ -12,8 +12,8 @@ WebSockets are used in **Live Vote** to enable real-time communication between t
 
 ### Admin Page
 
-![Admin Page Mockup](<img width="1287" alt="image" src="https://github.com/joemiddie13/live-vote/assets/102793694/7d8dd460-7272-4f10-bc33-4a97b77612a4">
-)
+<img width="1287" alt="image" src="https://github.com/joemiddie13/live-vote/assets/102793694/00775fbd-b356-450a-8ae2-b55bb89b9288">
+
 
 1. **Create Survey**: Admin can add multiple questions and choices. Each question has a "Add Choice" button to add more choices and a "Delete Choice" button to remove choices.
    - **Event**: `createSurvey` - Emits survey data to the server when the survey is submitted.

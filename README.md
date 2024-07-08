@@ -29,7 +29,8 @@ WebSockets are used in **Live Vote** to enable real-time communication between t
 
 ### User Page
 
-![User Page Mockup](user-page-mockup.png)
+<img width="1287" alt="image" src="https://github.com/joemiddie13/live-vote/assets/102793694/4344c6ff-79f7-49a8-838e-ff47482d52e5">
+
 
 1. **Survey Display**: Users see the survey questions and choices broadcast by the admin in real-time.
    - **Event**: `surveyData` - Listens for new survey data from the server and updates the survey display.

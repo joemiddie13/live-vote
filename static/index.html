@@ -9,9 +9,19 @@
 </head>
 <body>
     <div class="container">
+        <div class="d-flex justify-content-end my-2">
+            <button type="button" class="btn btn-secondary" id="toggleDarkMode">Toggle Dark Mode</button>
+        </div>
         <h1 class="text-center my-4">Live Vote</h1>
         <div id="surveyContainer" class="mb-4"></div>
+        <button type="button" class="btn btn-primary" id="submitVote">Submit Vote</button>
     </div>
+    <script>
+        const toggleButton = document.getElementById('toggleDarkMode');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="client.js"></script>
 </body>
